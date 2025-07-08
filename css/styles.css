@@ -38,6 +38,7 @@ body {
 
 .gallery-item:hover {
   transform: scale(1.044);
+  cursor: zoom-in;
 }
 
 .basicLightbox {
