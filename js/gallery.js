@@ -66,19 +66,25 @@ const images = [
 
 function galleryMarkup(images) {
   return images
-    .map(({ preview, original, description }) => {
-      return `
-          <li class="js-gallery-item gallery-item">
-              <a class="js-gallery-link gallery-link" href="${original}">
-                  <img class="js-gallery-image gallery-image" src="${preview}" data-source="${original}" alt="${description}" width="360" height="200" />
+    .map(
+      ({
+        preview: smallImage,
+        original: largeImage,
+        description: imageDescription,
+      }) => {
+        return `
+          <li class="gallery-item">
+              <a class="gallery-link" href="${largeImage}">
+                  <img class="gallery-image" src="${smallImage}" data-source="${largeImage}" alt="${imageDescription}" width="360" height="200" />
               </a>
           </li>
           `;
-    })
+      }
+    )
     .join("");
 }
 
-const galleryEl = document.querySelector(".js-gallery");
+const galleryEl = document.querySelector(".gallery");
 const markup = galleryMarkup(images);
 
 galleryEl.insertAdjacentHTML("beforeend", markup);
@@ -88,7 +94,7 @@ galleryEl.addEventListener("click", imageClick);
 function imageClick(e) {
   e.preventDefault();
 
-  if (!e.target.classList.contains("js-gallery-image")) return;
+  if (!e.target.classList.contains("gallery-image")) return;
 
   const originalUrl = e.target.dataset.source;
   const imageAlt = e.target.alt;

@@ -19,14 +19,11 @@ body {
   background-color: #ffffff;
 }
 
-.container {
+.gallery {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 24px 156px;
-}
-
-.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
