@@ -43,3 +43,14 @@ body {
 .gallery-item:hover {
   transform: scale(1.044);
 }
+
+.basicLightbox {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.basicLightbox--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
