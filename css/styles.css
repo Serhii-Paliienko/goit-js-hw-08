@@ -1,3 +1,7 @@
+main {
+  flex-grow: 1;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -11,9 +15,15 @@ ul {
 }
 
 body {
-  /* display: flex; */
-  margin: 24px 156px;
   min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 156px;
 }
 
 .gallery {
