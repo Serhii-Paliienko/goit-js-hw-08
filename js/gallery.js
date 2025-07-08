@@ -66,21 +66,15 @@ const images = [
 
 function galleryMarkup(images) {
   return images
-    .map(
-      ({
-        preview: smallImage,
-        original: largeImage,
-        description: imageDescription,
-      }) => {
-        return `
+    .map(({ preview, original, description }) => {
+      return `
           <li class="gallery-item">
-              <a class="gallery-link" href="${largeImage}">
-                  <img class="gallery-image" src="${smallImage}" data-source="${largeImage}" alt="${imageDescription}" width="360" height="200" />
+              <a class="gallery-link" href="${original}">
+                  <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}" width="360" height="200" />
               </a>
           </li>
           `;
-      }
-    )
+    })
     .join("");
 }
 
