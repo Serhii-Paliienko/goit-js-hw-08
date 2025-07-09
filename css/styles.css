@@ -34,11 +34,14 @@ body {
 .gallery-item {
   flex: 0 1 calc((100% - 72px) / 3);
   transition: transform 0.5s ease-in-out;
-  cursor: zoom-in;
 }
 
 .gallery-item:hover {
   transform: scale(1.044);
+}
+
+.gallery-image {
+  cursor: zoom-in;
 }
 
 .basicLightbox {
